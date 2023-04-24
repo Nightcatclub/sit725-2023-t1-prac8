@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "html": "^1.0.0",
+    "mongodb": "^4.4.1"
+  },
+  "name": "sit725-2023-t1-prac3",
+  "version": "1.0.0",
+  "description": "this is prac3",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nightcatclub/sit725-2023-t1-prac2.githttps:.git"
+  },
+  "author": "Renhao Chen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Nightcatclub/sit725-2023-t1-prac2.githttps:/issues"
+  },
+  "homepage": "https://github.com/Nightcatclub/sit725-2023-t1-prac2.githttps:#readme"
+}
