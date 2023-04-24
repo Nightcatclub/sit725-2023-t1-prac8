@@ -1,15 +1,15 @@
 const cardList = [
   {
-    title: "Monkey2",
+    title: "monkey2",
     image: "321.jpg",
-    link: " I AM Monkey2",
-    desciption: "Demo desciption about Monkey2",
+    link: " I AM monkey2",
+    desciption: "Demo desciption about monkey2",
   },
   {
-    title: "Monkey3",
+    title: "monkey3",
     image: "321.jpg",
-    link: " I AM Monkey3",
-    desciption: "Demo desciption about Monkey3",
+    link: " I AM monkey3",
+    desciption: "Demo desciption about monkey3",
   },
 ];
 
@@ -51,13 +51,13 @@ const submitForm = () => {
 
   console.log("Form Data Submitted: ", formData);
   // tell the server to save this to DB
-  addMonkey(formData);
+  addmonkey(formData);
 };
 
-const addMonkey = (Monkey) => {
+const addmonkey = (monkey) => {
   $.ajax({
-    url: "api/Monkeys",
-    data: Monkey,
+    url: "api/monkeys",
+    data: monkey,
     type: "Post",
     success: (result) => {
       alert(result.message);
@@ -66,8 +66,8 @@ const addMonkey = (Monkey) => {
   });
 };
 
-const getMonkeys = () => {
-  $.get("/api/Monkeys", (response) => {
+const getmonkeys = () => {
+  $.get("/api/monkeys", (response) => {
     if (response.statusCode == 200) {
       addCards(response.data);
     }
@@ -78,7 +78,7 @@ $(document).ready(function () {
   $(".materialboxed").materialbox();
   $(".modal").modal();
 
-  getMonkeys();
+  getmonkeys();
 
   $("#formSubmit").click(() => {
     submitForm();
