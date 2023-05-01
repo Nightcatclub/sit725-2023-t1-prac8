@@ -10,4 +10,8 @@ router.get("/api/monkeys", (req, res) => {
   controller.getAllmonkeys(req, res);
 });
 
+router.delete("/api/monkeys", (req, res) => {
+  controller.deletemonkey(req, res);
+});
+
 module.exports = router;

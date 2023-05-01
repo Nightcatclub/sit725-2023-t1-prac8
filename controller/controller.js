@@ -23,4 +23,20 @@ const getAllmonkeys = (req, res) => {
   });
 };
 
-module.exports = { createmonkeys, getAllmonkeys };
+const deletemonkey = (req, res) => {
+  //this will delete monkey
+  let monkey = req.body;
+  model.remove(monkey, (error, result) => {
+    if (err) {
+      res.json({ statusCode: 400, message: err });
+    } else {
+      res.json({
+        statusCode: 200,
+        data: result,
+        message: "Sucessfully removed",
+      });
+    }
+  });
+};
+
+module.exports = { createmonkeys, getAllmonkeys, deletemonkey };

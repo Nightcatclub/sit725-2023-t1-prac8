@@ -9,4 +9,8 @@ function getAllmonkeys(callback) {
   collection.find().toArray(callback);
 }
 
-module.exports = { insert, getAllmonkeys };
+function remove(monkey, callback) {
+  collection.deleteOne(monkey, callback);
+}
+
+module.exports = { insert, getAllmonkeys, remove };
