@@ -74,6 +74,11 @@ const getmonkeys = () => {
   });
 };
 
+let socket = io();
+socket.on("number", (msg) => {
+  console.log("Random number is:", msg);
+});
+
 $(document).ready(function () {
   $(".materialboxed").materialbox();
   $(".modal").modal();
