@@ -76,7 +76,7 @@ const getmonkeys = () => {
 
 let socket = io();
 socket.on("number", (msg) => {
-  console.log("Random number is:", msg);
+  console.log("Recive from server:" + msg);
 });
 
 $(document).ready(function () {
